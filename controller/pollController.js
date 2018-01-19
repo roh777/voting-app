@@ -11,8 +11,18 @@ exports.newpoll = (req, res) => {
 
 exports.createNewPoll = async (req, res) => {
     req.body.author = req.user._id;
-    console.log('saving', req.body);
-    const newPoll = await (new Poll(req.body)).save();
-    res.send(req.body);
-    
+    let optArr = [];
+
+    req.body.options.forEach((option) => {
+        optArr.push({ option : option, votes : 0})
+    });
+
+    const newPoll = new Poll({
+        question : req.body.question,
+        author : req.user._id,
+        options : optArr
+    });
+
+    await newPoll.save();
+    res.send(newPoll);
 }
