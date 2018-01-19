@@ -2,10 +2,31 @@ doctype html
 html
   head
     title= `Voting App`
-    link(rel='stylesheet', href='/dist/style.css')
+    link(rel='stylesheet', href='/style.css')
     link(rel="shortcut icon" type="image/png" href="/images/icons/doughnut.png")
+    
     meta(name="viewport" content="width=device-width, initial-scale=1")
+  html
   body
-    .content
+    link(href="https://fonts.googleapis.com/css?family=Raleway|Kavivanar" rel="stylesheet")
+    .main
+      h1.pollster Pollster
+      ul.menu
+        if user
+          li.twitter
+            a(href="/yourpolls") Your Polls
+          li.twitter
+            a(href="/newpoll") Create New Poll
+        else
+          li.twitter
+            a(href="/login") Sign In with Twitter
+      p.para
+        | A simple application to make online polls that you can send to anyone and collect insights.
+        | LogIn via twitter to create and manage you polls.
+
       block content
         p This is the default!
+      
+  block scripts
+    script(src='/bundle.js')
+
