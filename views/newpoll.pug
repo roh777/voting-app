@@ -2,15 +2,13 @@ extends layout
 
 block content
     h1 New Poll
-    form( method='POST')
-        label(for='question') Poll Question
-        br
-        textarea(name="question", cols="80", rows="10")
-        br
-        label(for='options') Options for Poll
-        input(type='text' name='options[]' placeholder='option')
-        br
+    form.poll-form( method='POST')
+        label.poll-form__label(for='question') Poll Question
+        textarea(name="question", cols="80", rows="10" placeholder='Enter your question')
+        label.poll-form__label(for='options') Options for Poll
+        div#options
+            input.options(type='text' name='options[]' placeholder='option')
+        
         input(type='submit' value='Create New Poll')
-        br
     button#addnew(name='addnew') New Option
 

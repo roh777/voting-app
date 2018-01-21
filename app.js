@@ -9,6 +9,7 @@ const session = require('express-session');
 const passport = require('passport');
 const helpers = require('./helper');
 require('./handlers/passport');
+const errorHandlers = require('./handlers/errorHandlers');
 
 
 // view engine setup
@@ -45,5 +46,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 app.use('/', routes);
+
+app.use(errorHandlers.notFound);
+
 module.exports = app;
 

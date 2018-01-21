@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    p #{poll.question}
+    ul
+        each option in poll.options
+            li #{option.option} 
+                span #{option.votes}

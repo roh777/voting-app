@@ -2,30 +2,36 @@ doctype html
 html
   head
     title= `Voting App`
-    link(rel='stylesheet', href='/style.css')
     link(rel="shortcut icon" type="image/png" href="/images/icons/doughnut.png")
-    
+    link( href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet")
+    link(rel='stylesheet', href='/style.css')
     meta(name="viewport" content="width=device-width, initial-scale=1")
   html
   body
-    link(href="https://fonts.googleapis.com/css?family=Raleway|Kavivanar" rel="stylesheet")
-    .main
-      h1.pollster Pollster
-      ul.menu
+    nav
+      ul
+        li.title
+          a(href='/') Pollster
         if user
-          li.twitter
-            a(href="/yourpolls") Your Polls
-          li.twitter
-            a(href="/newpoll") Create New Poll
+          li
+            a(href='/yourpolls') Your Polls
+          li
+            a(href='/newpoll') Create Poll
+          li
+            a(href='/logout') Log Out
         else
-          li.twitter
-            a(href="/login") Sign In with Twitter
-      p.para
-        | A simple application to make online polls that you can send to anyone and collect insights.
-        | LogIn via twitter to create and manage you polls.
+          li
+            a(href='/login') Twitter Login
 
+    .container
       block content
-        p This is the default!
+
+  
+    footer
+      p   Created by 
+        |
+        a( target='blank' href='https://www.github.com/roh777') Rohit Yadav.
+        |  2018
       
   block scripts
     script(src='/bundle.js')

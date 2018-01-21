@@ -1,10 +1,14 @@
 import { $ , $$ } from './modules/bling';
 
 const addnew = $('button#addnew');
-if (addnew) {
-    addnew.on('click', function() {
-        const form = $('form');
-        if(!form) return; //skip it
-        form.innerHTML += `<input type='text' name='options[]'></input>`
-    });    
+const options = $('#options');
+
+if(addnew) {
+    addnew.on('click', ()=>{
+        const input = document.createElement('input');
+        input.setAttribute('type','text');
+        input.setAttribute('placeholder', 'options');
+
+        options.insertAdjacentElement('beforeend', input);
+    });
 }

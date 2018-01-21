@@ -73,12 +73,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 const addnew = Object(__WEBPACK_IMPORTED_MODULE_0__modules_bling__["a" /* $ */])('button#addnew');
-if (addnew) {
-    addnew.on('click', function() {
-        const form = Object(__WEBPACK_IMPORTED_MODULE_0__modules_bling__["a" /* $ */])('form');
-        if(!form) return; //skip it
-        form.innerHTML += `<input type='text' name='options[]'></input>`
-    });    
+const options = Object(__WEBPACK_IMPORTED_MODULE_0__modules_bling__["a" /* $ */])('#options');
+
+if(addnew) {
+    addnew.on('click', ()=>{
+        const input = document.createElement('input');
+        input.setAttribute('type','text');
+        input.setAttribute('placeholder', 'options');
+
+        options.insertAdjacentElement('beforeend', input);
+    });
 }
 
 
