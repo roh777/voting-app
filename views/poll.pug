@@ -1,8 +1,11 @@
 extends layout
 
 block content
-    p #{poll.question}
-    ul
+    h3 #{poll.question}
+    form(method='POST' action=`/vote/${poll._id}`)
         each option in poll.options
-            li #{option.option} 
-                span #{option.votes}
+            label(for=`${option}`) #{option.option}
+            input(type="radio" name=`choice` value=`${option.option}`)
+            br
+        input(type="submit" value="Vote")
+            

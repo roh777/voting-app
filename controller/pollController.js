@@ -26,7 +26,26 @@ exports.createNewPoll = async (req, res) => {
     });
 
     await newPoll.save();
-    res.send(newPoll);
+    res.redirect(`/poll/${newPoll.id}`);
+}
+
+exports.vote = async (req, res) => {
+    const poll_id = req.params.poll_id;
+    const choice = req.body.choice;
+
+    await Poll.update({_id : poll_id, "options.option": choice},
+        { $inc: { "options.$.votes": 1 } }
+    ).exec();
+
+    res.redirect(`/result/${poll_id}`);
+  
+
+}
+
+exports.showResults = async (req, res) => {
+    const poll_id = req.params.poll_id;
+    const poll =  await Poll.findById({_id : poll_id});
+    res.render('result', {poll});
 }
 
 exports.showPoll = async (req, res, next) => {

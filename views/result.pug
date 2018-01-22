@@ -1,0 +1,7 @@
+extends layout
+
+block content
+    h3 #{poll.question}
+    each option in poll.options
+        p #{option.option}  : #{option.votes} 
+    
