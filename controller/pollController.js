@@ -10,6 +10,12 @@ exports.newpoll = (req, res) => {
     res.render('newpoll');
 }
 
+exports.pollsbyUser = async (req, res) => {
+    const user = req.user._id;
+    const polls = await Poll.find({author : user});
+    res.render('profile', {polls});
+}
+
 exports.createNewPoll = async (req, res) => {
     req.body.author = req.user._id;
     let optArr = [];

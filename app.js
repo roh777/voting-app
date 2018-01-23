@@ -48,6 +48,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/', routes);
 
 app.use(errorHandlers.notFound);
+app.use(errorHandlers.developmentErrors);
 
 module.exports = app;
 

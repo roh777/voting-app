@@ -16,4 +16,9 @@ exports.isLoggedIn = (req, res, next) => {
     res.redirect('/');
 };
 
+exports.logout = (req, res) => {
+    req.logout();
+    res.redirect('/');
+}
+
 

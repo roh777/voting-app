@@ -1,7 +1,8 @@
 extends layout
 
 block content
-    h3 #{poll.question}
+    h1 Results
+    h3 Question: #{poll.question}
     each option in poll.options
         p #{option.option}  : #{option.votes} 
     
