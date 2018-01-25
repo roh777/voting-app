@@ -1,4 +1,6 @@
+import '../sass/style.scss';
 import { $ , $$ } from './modules/bling';
+
 
 const addnew = $('button#addnew');
 const options = $('#options');

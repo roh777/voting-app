@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./start.js",
-    "watch" : "nodemon ./start.js --ignore pubic/",
-    "dev" : "concurrently 'npm run watch' 'npm run assets'",
-    "assets" : "webpack -w"
+    "watch": "nodemon ./start.js --ignore pubic/",
+    "dev": "concurrently 'npm run watch' 'npm run assets'",
+    "assets": "webpack -w"
   },
-  "author": "",
+  "author": "Rohit Yadav",
+  "website": "https://github.com/roh777/voting-app/tree/",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
@@ -21,7 +22,13 @@
     "nodemon": "^1.14.11",
     "passport": "^0.4.0",
     "passport-twitter": "^1.0.4",
-    "pug": "^2.0.0-rc.4",
+    "pug": "^2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.9",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
     "webpack": "^3.10.0"
   }
 }

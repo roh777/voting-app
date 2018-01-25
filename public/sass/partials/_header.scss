@@ -1,0 +1,39 @@
+nav {
+	font-family: 'PT Sans', sans-serif;
+}
+
+nav > ul > li.title {
+	font-weight: 800;
+	float:left;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+nav > ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+nav > ul > li {
+	float: right;
+}
+
+nav > ul > li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+nav > ul > li.title{
+	float: left;
+}
+
+/* Change the link color to #111 (black) on hover */
+nav > ul > li a:hover {
+	background-color: #111;
+}

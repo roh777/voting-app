@@ -1,0 +1,19 @@
+div.container > h2 {
+	font-size: 40px;
+}
+
+div.question > a{
+	text-decoration: none;
+	color: #333;
+	margin-bottom: 5px;
+}
+
+div.question > a:hover {
+	color: darkslategray;
+}
+
+div.container {
+	max-width: 60%;
+	margin: 0 auto;
+	font-size: 22px;
+}
