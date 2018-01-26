@@ -1,5 +1,5 @@
 div.container > h2 {
-	font-size: 40px;
+	font-size: 32px;
 }
 
 div.question > a{
@@ -9,11 +9,21 @@ div.question > a{
 }
 
 div.question > a:hover {
-	color: darkslategray;
+	color: black;
+	text-decoration: underline;
 }
 
 div.container {
 	max-width: 60%;
 	margin: 0 auto;
-	font-size: 22px;
+	font-size: 18px;
+}
+
+.option {
+	padding: 5px 10px;
+
+}
+
+.option:hover{
+	background-color: lightgray;
 }

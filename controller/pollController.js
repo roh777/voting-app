@@ -22,7 +22,8 @@ exports.createNewPoll = async (req, res) => {
 
     //convert every poll option to an object with corresponding votes
     req.body.options.forEach((option) => {
-        optArr.push({ option : option, votes : 0})
+        if(option.length > 0)
+            optArr.push({ option : option, votes : 0})
     });
 
     const newPoll = new Poll({

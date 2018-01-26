@@ -9,6 +9,8 @@ nav > ul > li.title {
 	text-transform: uppercase;
 }
 
+
+
 nav > ul {
 	list-style-type: none;
 	margin: 0;
@@ -19,6 +21,9 @@ nav > ul {
 
 nav > ul > li {
 	float: right;
+	a.twitter:hover {
+		background-color: $twitterbg;
+	}
 }
 
 nav > ul > li a {
@@ -27,13 +32,12 @@ nav > ul > li a {
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
+	:hover {
+	background-color: #111;
+	}
 }
 
 nav > ul > li.title{
 	float: left;
 }
 
-/* Change the link color to #111 (black) on hover */
-nav > ul > li a:hover {
-	background-color: #111;
-}

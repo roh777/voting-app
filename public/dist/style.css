@@ -16,6 +16,8 @@ nav > ul {
 
 nav > ul > li {
   float: right; }
+  nav > ul > li a.twitter:hover {
+    background-color: #4bb4f4; }
 
 nav > ul > li a {
   display: block;
@@ -23,13 +25,11 @@ nav > ul > li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none; }
+  nav > ul > li a :hover {
+    background-color: #111; }
 
 nav > ul > li.title {
   float: left; }
-
-/* Change the link color to #111 (black) on hover */
-nav > ul > li a:hover {
-  background-color: #111; }
 
 body {
   box-sizing: border-box;
@@ -44,25 +44,23 @@ body {
 textarea {
   padding: 10px;
   border-radius: 5px;
-  font-family: 'PT Sans', sans-serif;
-  font-size: 18px; }
+  font-size: 16px; }
+
+textarea, input[type='text'] {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 13px; }
 
 input[type='text'] {
-  height: 25px;
+  height: 15px;
   width: 500px;
-  padding: 5px 5px; }
-
-input[type='text']:active {
-  border: 5px #333; }
-
-.option {
-  padding: 5px 10px; }
-
-.option:hover {
-  background-color: lightgray; }
+  padding: 2px 2px;
+  margin-top: 5px; }
+  input[type='text'] :active {
+    border-radius: 20px;
+    border: 3px solid; }
 
 div.container > h2 {
-  font-size: 40px; }
+  font-size: 32px; }
 
 div.question > a {
   text-decoration: none;
@@ -70,18 +68,26 @@ div.question > a {
   margin-bottom: 5px; }
 
 div.question > a:hover {
-  color: darkslategray; }
+  color: black;
+  text-decoration: underline; }
 
 div.container {
   max-width: 60%;
   margin: 0 auto;
-  font-size: 22px; }
+  font-size: 18px; }
+
+.option {
+  padding: 5px 10px; }
+
+.option:hover {
+  background-color: lightgray; }
 
 footer {
+  margin-top: 20px;
   position: absolute;
   right: 0;
-  bottom: 0;
   left: 0;
+  bottom: 0;
   background-color: #efefef;
   text-align: center;
   font-size: 12px; }

@@ -3,8 +3,8 @@ html
   head
     title= `Voting App`
     link(rel="shortcut icon" type="image/png" href="/images/icons/doughnut.png")
-    link( href="https://fonts.googleapis.com/css?family=Work+Sans|PT+Sans" rel="stylesheet")
-    link(rel='stylesheet', href='dist/style.css')
+    link( href="https://fonts.googleapis.com/css?family=Merriweather+Sans|PT+Sans" rel="stylesheet")
+    link(rel='stylesheet', href='/dist/style.css')
     meta(name="viewport" content="width=device-width, initial-scale=1")
   html
   body
@@ -21,7 +21,7 @@ html
             a(href='/logout') Log Out
         else
           li
-            a(href='/login') Twitter Login
+            a.twitter(href='/login') Twitter Login
 
     .container
       block content
@@ -34,5 +34,5 @@ html
         |  2018
       
   block scripts
-    script(src='dist/bundle.js')
+    script(src='/dist/bundle.js')
 
