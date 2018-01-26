@@ -25,4 +25,26 @@ input[type='text'] {
 	}
 }
 
+.button {
+	margin-top: 10px;
+	clear: both;
+	padding: 5px 10px;
+	text-align: center;
+	background-color: rgb(27, 25, 25);;
+	color: #efef;
+	font-size: 15px;
+	font-weight: 800;
+	border: none;
+	border-radius: 5px 5px 5px 5px;
 
+	:hover{
+		background-color:grey;
+	}
+
+	:active {
+		top: 2px;
+	}
+
+	display: inline;
+	
+}
