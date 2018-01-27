@@ -5,7 +5,6 @@ async function  createChart (ctx, poll_id) {
     if(!ctx) return;
     //remove portname in deployed url
     const url = "https://"+window.location.hostname+"/result/"+poll_id+"/json";
-    console.log(url);
     const poll =  await axios.get(url).then(res => res.data);
     const pollQuestion = poll.question;
     const d = poll.options;
