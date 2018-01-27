@@ -55,6 +55,14 @@ exports.showResults = async (req, res) => {
     res.render('result', {poll});
 }
 
+exports.getJSONResult = async(req, res)=> {
+    const poll_id = req.params.poll_id;
+    const poll = await Poll.findById({ _id: poll_id });
+    if(poll) {
+        res.json(poll);
+    }
+}
+
 exports.showPoll = async (req, res, next) => {
     const poll_id = req.params.poll_id;
     const poll = await Poll.findById({_id : poll_id}).populate('author');

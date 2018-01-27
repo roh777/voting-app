@@ -19,4 +19,7 @@ router.get('/poll/:poll_id', catchErrors(pollController.showPoll));
 router.post('/vote/:poll_id', catchErrors(pollController.vote));
 router.get('/result/:poll_id', catchErrors(pollController.showResults));
 
+router.get('/result/:poll_id/json', catchErrors(pollController.getJSONResult));
+
+
 module.exports = router;

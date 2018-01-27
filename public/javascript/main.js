@@ -1,5 +1,6 @@
 import '../sass/style.scss';
 import { $ , $$ } from './modules/bling';
+import createChart from './modules/resultChart';
 
 
 const addnew = $('button#addnew');
@@ -17,3 +18,5 @@ if(addnew) {
 
     });
 }
+
+createChart($('#mychart'), $('canvas').dataset.pollid);
