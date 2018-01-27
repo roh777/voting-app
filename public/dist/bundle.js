@@ -18198,7 +18198,8 @@ NodeList.prototype.on = NodeList.prototype.addEventListener = function (name, fn
 async function  createChart (ctx, poll_id) {
     if(!ctx) return;
     //remove portname in deployed url
-    const url = "http://"+window.location.hostname+":7777/result/"+poll_id+"/json";
+    const url = "https://"+window.location.hostname+"/result/"+poll_id+"/json";
+    console.log('FETCHING :'+url);
     const poll =  await __WEBPACK_IMPORTED_MODULE_1_axios___default.a.get(url).then(res => res.data);
     const pollQuestion = poll.question;
     const d = poll.options;
