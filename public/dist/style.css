@@ -100,6 +100,19 @@ div.container {
   background-color: lightgray; }
 
 .chart {
+  margin: auto 0;
   height: 400px;
   width: 400px;
   text-align: center; }
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center; }
+  .footer a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #333;
+    font-family: "PT Sans", sans-serif; }
